@@ -1,0 +1,51 @@
+extends base
+
+block append head 
+    link(rel='stylesheet' href='/css/style.css')
+    script(src='/js/cart.js')
+
+block content
+
+    section#sm-banner.section-p1
+        .banner-box.banner-box-1
+            h2 buy 1 get 1 free
+            span The best class dress is on sale at MODIST
+        .banner-box.banner-box-2
+            h2 upcoming season
+            span The best class dress is on sale at MODIST
+    // Products
+    section#product1.section-p1
+        .trend-items
+            .products-title
+                h1.trend-1 PRODUCTS
+                h2.trend-2 OUR PRODUCTS
+            .products-container
+                each product in products
+                    .pro
+                        img(src=`${product.image}`)
+                        .des
+                            .des
+                                span= product.description
+                                h5= product.name
+                                span= product.category
+                                h4= product.price
+                            i.fa.fa-shopping-cart.cart
+        // Filter
+        #filter-li-container
+            #category-list.filter-li.filter-li-group
+        .flex-none.w-48
+            ul#category-list
+        #shop-container
+    .clear
+    section#newsletter.section-p1.section-m1
+        .trend-items
+            h1.trend-1 SUBSCRIBE
+            h2.trend-2 OUR NEWSLETTER
+            .form
+                input(
+                    placeholder="Your email address" 
+                    type="text"
+                    )
+                button.normal Sign up
+    
+    include _footer

@@ -1,0 +1,34 @@
+extends base
+
+block append head 
+    link(rel="stylesheet" href="/css/dashboard.css")
+
+block content
+
+    section.userDash
+        .userInfo
+            img.userImg(src="./img/avatar.jpg")
+            h3.userName Admin
+        #myBtnContainer.userControl
+            ul
+                li#dashTitle Dashboard
+                li.btn(onclick="selection('activeUsers')") Active Users
+                li.btn(onclick="selection('soldItems')") Sold Items
+                li.btn(onclick="selection('budget')") Budget & Total Revenue
+                // <li>+ Add New </li>
+                // <button id="myBtn">Open Modal</button>
+    .dashContainer
+        .dashUser.activeUsers
+            each user in users
+                .chip
+                    img(height="96" width="96" alt="Person" src="./img/profile-1.jpg")
+                    | #{user.name}
+        .dashUser.soldItems
+            h2 Sold Items
+        .dashUser.budget
+            img(
+                alt="" 
+                src="/img/productivity.png"
+                )
+            h2 Budget & Total Revenue
+    script(src="/js/board.js")

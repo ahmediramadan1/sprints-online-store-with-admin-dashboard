@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        block head
+            meta(charset="UTF-8")
+            link(rel="stylesheet" content="width=device-width, initial-scale=1.0" name="viewport")
+            link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet")
+            link(href="/css/style.css" rel="stylesheet")
+            title LE MODIST #{title}
+        body
+            include _header
+
+            block content 
+
+            script(src='/js/bundled/index.js')

@@ -1,0 +1,65 @@
+extends base
+
+block append head 
+    link(rel="stylesheet" href="/css/signup.css")
+
+block content
+
+    .container
+        main
+            form.register-form#signup(action="")
+                p.main-h1.side-p LE-MODIST
+                h1.main-h1 Register
+                .form-field
+                    input#name(
+                        maxlength="15" 
+                        minlength="3" 
+                        placeholder="Name" 
+                        type="text"
+                        )
+                    i.fa-solid.fa-signature
+                .form-field
+                    input#email(
+                        maxlength="18" 
+                        placeholder="E-mail" 
+                        type="email"
+                        )
+                    i.fa-solid.fa-envelope
+                .form-field
+                    input#password(
+                        maxlength="25" 
+                        minlength="8" 
+                        placeholder="Please Enter Password" 
+                        type="password"
+                        )
+                    i.fa-solid.fa-lock
+                .form-field
+                    input#passwordConfirm(
+                        maxlength="25" 
+                        minlength="8" 
+                        placeholder="Re-type Password" 
+                        type="password"
+                        )
+                    i.fa-solid.fa-lock
+                .form-field
+                    a.link-tag(href="/login") Already have An Account
+                div
+                    button.btn(type="submit") Register
+                .loginMeth
+                    p.login-methods Use Another Social Profile Methods
+                    .icons-login
+                        i.fa-brands.fa-facebook
+                        i.fa-brands.fa-google
+                .Check-field
+                    input(
+                        required="" 
+                        type="checkbox"
+                        )
+                    | I Agree to Terms and Conditions
+                .Check-field
+                    input( 
+                        type="checkbox"
+                        )
+                    | Stay in the loop with the latest trends and exclusive offers! Subscribe to our newsletter and unlock a world of style, delivered straight to your inbox.
+
+    include _footer

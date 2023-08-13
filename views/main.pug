@@ -1,0 +1,54 @@
+extends base
+
+block content
+    section#hero
+        .overlay
+        h1 le stylist
+        h2.wearYrD Wear Your Dress
+    section#product1.section-p1
+        .trend-items
+            h1.trend-1 TRENDING
+            h2.trend-2 TRENDING
+        #product-container
+    .clear
+    main.bg-color
+        .mainSec
+            .imgCov
+            .carousel
+                h1 Modist Fashion Shop
+                p
+                    | Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    |   Nostrum quaerat aliquid, quisquam magni possimus quas accusantium repellendus quod.
+                    |   Repellendus eos impedit ullam id ratione sint. Hic aperiam rem architecto sapiente, 
+                    |   modi ea illo adipisci itaque a facere ipsa repudiandae iusto assumenda quo mollitia quasi reiciendis !
+    section#banner.section-m1
+        h4 Latest Offer
+        h2
+            span 50% Off
+            | - All T-Shirts
+        button.normal(onclick="location.href='#';") Shop Now
+    .trend-items
+        h1.trend-1 BLOG
+        h2.trend-2 RECENT BLOG
+    section#banner-3
+        .banner-box.banner-box-1
+            h2 SEASONAL SALE
+            h3 Winder Collection 50% OFF
+        .banner-box.banner-box-2
+            h2 Delivery Fast
+            h3 Without Fees
+        .banner-box.banner-box-3
+            h2 T-SHIRTS
+            h3 New Trendy Summer
+    section#newsletter.section-p1.section-m1
+        .trend-items
+            h1.trend-1 SUBSCRIBE
+            h2.trend-2 OUR NEWSLETTER
+            .form
+                input(
+                    placeholder="Your email address" 
+                    type="text"
+                    )
+                button.normal Sign up
+
+    include _footer

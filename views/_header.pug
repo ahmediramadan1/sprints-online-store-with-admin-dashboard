@@ -1,0 +1,34 @@
+header#header
+    ul.brandName
+        li
+            a(href="/") LE MODIST
+    div
+        ul#navbar
+            li
+                a.active(href="/") Home
+            li
+                a(href="/shop") Shop
+            if user
+                - const superAdmin = (user.role === "super-admin");
+                if superAdmin
+                    li
+                        a(href="/dashboard") Dashboard
+                li
+                    a(href="/checkout") Checkout
+                li
+                    a#logout(href="") Log out
+                li#lg-bag
+                    a(href="#")
+                        i.fa-solid.fa-cart-shopping
+                a#close(href="#")
+                    i.fa.fa-times
+            else
+                li
+                    a(href="/login") Log in
+                li
+                    a(href="/signup") Sign up
+            
+    #mobile
+        a(href="#")
+            i.fa-solid.fa-cart-shopping
+        i#bar.fa-solid.fa-bars

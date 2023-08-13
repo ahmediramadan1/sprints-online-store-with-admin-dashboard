@@ -1,0 +1,70 @@
+extends base
+
+block append head 
+    script(src="https://js.stripe.com/v3/")
+
+block content
+
+    section#page-header.about-header
+        h2 CHECKOUT
+    // Form details
+    section#form-details
+        form(action="")
+            h2 Contact information
+            input(
+                placeholder="E-Mail" 
+                type="email"
+                )
+            input(
+                placeholder="Phone" 
+                type="email"
+                )
+            h2 Shipping address
+            input(
+                placeholder="Full name" 
+                type="text"
+                )
+            input(
+                placeholder="Address" 
+                type="text"
+                )
+            input(
+                placeholder="City" 
+                type="text"
+                )
+            input(
+                placeholder="Postal code" 
+                type="text"
+                )
+            button#checkout.normal Submit
+        //
+            <div id="subtotal">
+                <h3>CART TOTAL</h3>
+                <table>
+                <tr>
+                <td>Cart Subtotal</td>
+                <td class="cart-subtotal">$ </td>
+                </tr>
+                <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+                </tr>
+                <tr>
+                <td><b>Total</b></td>
+                <td class="cart-total" style="font-weight:600;">$ </td>
+                </tr>
+                </table>
+                </div>
+    // Footer
+    section#newsletter.section-p1.section-m1
+        .trend-items
+            h1.trend-1 SUBCRIBE
+            h2.trend-2 OUR NEWSLETTER
+            .form
+                input(
+                    placeholder="Your email address" 
+                    type="text"
+                    )
+                button.normal Sign up
+
+    include _footer
